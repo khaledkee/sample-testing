@@ -23,6 +23,7 @@ public class PropertyBasedTest {
             if (null == prev) prev = aStr;
             curr = aStr;
             assertThat("Elements should be sorted", curr.compareTo(prev)>-1, is(true));
+			prev = curr;
         }
     }
 }
