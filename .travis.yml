@@ -1,9 +1,11 @@
 language: java
-script: jdk_switcher use oraclejdk8
+# get us on the new container based builds, we're not using any fancyness
+sudo: false
+#jdk 1.8
+jdk:
+- openjdk8
+#build
 script: mvn clean test
+#email
 notifications:
-  # Email notifications are disabled to not annoy anybody.
-  # See http://about.travis-ci.org/docs/user/build-configuration/ to learn more
-  # about configuring notification recipients and more.
-  webhooks: http://basho-engbot.herokuapp.com/travis?key=a8f477c8cdaabc8118d2a650281ff4a71eff875f
-  email: false
+   email: false
