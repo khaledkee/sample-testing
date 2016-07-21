@@ -3,7 +3,7 @@ language: java
 sudo: false
 #jdk 1.8
 jdk:
-- openjdk8
+- oraclejdk8
 #build
 script: mvn clean test
 #email
